@@ -21,8 +21,17 @@ describe('Outputs JSON acording to input', () => {
 		natural: "December 25, 2000"
 	};
 
+	const output5 = {
+		unix: null,
+		natural: null
+	};
+
 	it('Outputs output1 when receive 1450137600', ()=> {
 		expect(timestamp_function(1450137600)).to.deep.equal(output1);
+	});
+
+	it('Outputs output1 when receive "1450137600" ', ()=> {
+		expect(timestamp_function("1450137600")).to.deep.equal(output1);
 	});
 
 	it('Outputs output2 when receive 145090101', ()=> {
@@ -35,6 +44,14 @@ describe('Outputs JSON acording to input', () => {
 
 	it('Outputs output4 when receive December 25, 2000', ()=> {
 		expect(timestamp_function("December 25, 2000")).to.deep.equal(output4);
+	});
+
+	it('Outputs output4 when receive december 25, 2000', ()=> {
+		expect(timestamp_function("december 25, 2000")).to.deep.equal(output4);
+	});
+
+	it('Outputs null for both when receive invalid string', ()=> {
+		expect(timestamp_function("DEC242004")).to.deep.equal(output5);
 	});
 
 });

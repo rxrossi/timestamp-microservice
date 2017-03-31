@@ -1,15 +1,14 @@
 import express from 'express';
+import timestamp_function from './utils/timestamp_function';
 
 const app = express();
-
 app.get('/', (req, res) => {
 	res.send('Hello World');
 });
 
+
 app.get('/:param', (req, res) => {
-	console.log(req.params.param);
-	const date = new Date (req.params.param);
-	res.send(date.toString());
+	res.send(timestamp_function(req.params.param));
 } );
 
 export default app;
