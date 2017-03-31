@@ -1,0 +1,80 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Timestamp API Instructions</title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<style type="text/css" media="screen">
+			* {
+				margin: 0;
+				padding: 0;
+				font-family: 'Roboto', sans-serif;
+			}
+
+			em {
+				font-style: normal;
+				font-weight: bold;
+				color: #d33;
+			}
+
+			h1 {
+				padding: 1rem 0;
+			}
+
+			body {
+				width: 100%;
+				background: #eaeaea;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.mainDiv {
+				max-width: 100%;
+				width: 800px;
+				background: #f9f9f9;
+				padding: 5rem;
+				color: #333;
+				box-shadow: 0 0 4rem #999;
+				border-radius: 1rem;
+			}
+
+			.mainDiv p {
+				padding: 0.7rem;
+			}
+			.mainDiv ul {
+				margin-left: 2.5rem;
+			}
+			.mainDiv li {
+				padding: 0.2rem;
+			}
+
+		</style>
+		<body>
+			<div class="mainDiv">
+				<h1>Timestamp API Instructions</h1>
+				<p>
+				This <em>API</em> works with <em>UTC time</em>.
+				</p>
+				<p>
+				You can pass unix timestamp or a date string to get
+					back a JSON containing the unix timestamp and a date string.
+				</p>
+				<p>
+				The acceptable string is formated like "<b>Month</b>(string), <b>Day</b>(number) <b>Year</b>(Four Digits)".
+					Ex: December 15, 2015
+				</p>
+				<p>
+				Simply <em>pass </em> a <em>string</em> or <em>unix timestamp</em> on your <em>URL</em> to test.
+				</p>
+				<p>
+					Examples:
+						<ul>
+							<li><a href="/December 15, 2015">December 15, 2015</a></li>
+							<li><a href="/1450137600">1450137600</a> (Unix timestamp)</li>
+						</ul>
+				</p>
+			</div>
+
+		</body>
+	</head>
+</html>

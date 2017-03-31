@@ -39,8 +39,6 @@ export default (input) => {
 
 	const month = months[date.getUTCMonth()].replace(/\b\w/g, l => l.toUpperCase());
 
-	console.log(month);
-
 	const natural = `${month} ${date.getUTCDate()}, ${date.getUTCFullYear()}`;
 
 	return {
