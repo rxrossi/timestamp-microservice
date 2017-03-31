@@ -7,8 +7,9 @@ app.get('/', (req, res) => {
 });
 
 app.get('/:param', (req, res) => {
-	res.send(req.params);
+	console.log(req.params.param);
+	const date = new Date (req.params.param);
+	res.send(date.toString());
 } );
 
-app.listen(3000, ()=> console.log('Timestamp listening at 3000!'));
-
+export default app;
