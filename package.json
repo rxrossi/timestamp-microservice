@@ -9,7 +9,7 @@
     "test": "mocha --opts tests/integration/mocha.opts src/**/*.test.js --watch"
   },
   "keywords": [],
-  "author": "",
+  "author": "rxrossi",
   "license": "ISC",
   "devDependencies": {
     "babel-cli": "^6.24.0",
